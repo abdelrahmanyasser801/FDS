@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>
+		Firebase Phone Number Auth
+	</title>
+</head>
+
+<body>
+	<form>
+		<input type="text" id="verificationcode" value="enter verification">
+		<input type="button" value="Submit" onclick="myFunction()">
+	</form>
+	<div id="recaptcha-container"></div>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+			authDomain: "waslnyangaz.firebaseapp.com",
+			databaseURL: "https://waslnyangaz.firebaseio.com",
+			projectId: "waslnyangaz",
+			storageBucket: "waslnyangaz.appspot.com",
+			messagingSenderId: "215507724801"
+		};
+		firebase.initializeApp(config);
+		var firebase = require('firebase');
+		var firebaseui = require('firebaseui');
+
+	</script>
+	<script type="text/javascript">
+		window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+		firebase.auth().signInWithPhoneNumber("+2001285636325", window.recaptchaVerifier)
+			.then(function (confirmationResult) {
+				window.confirmationResult = confirmationResult;
+				a(confirmationResult);
+			});
+		var myFunction = function () {
+			window.confirmationResult.confirm(document.getElementById("verificationcode").value)
+				.then(function (result) {
+					alert('login process successfull!\n redirecting');
+					alert('<a href="javascript:alert(\'hi\');">alert</a>')
+					window.location.href = "details.html";
+				}, function (error) {
+					alert(error);
+				});
+		};
+	</script>
+</body>
+
+</html>

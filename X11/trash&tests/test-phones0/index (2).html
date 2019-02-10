@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Firebase Phone Number Auth
+    </title>
+</head>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+        authDomain: "waslnyangaz.firebaseapp.com",
+        databaseURL: "https://waslnyangaz.firebaseio.com",
+        projectId: "waslnyangaz",
+        storageBucket: "waslnyangaz.appspot.com",
+        messagingSenderId: "215507724801"
+    };
+    firebase.initializeApp(config);
+
+//alert(e+" : "+p);
+
+</script>
+
+<body>
+
+    <p></p>
+    <input type="text" id="phonenumber" value="+2001205948129">
+    <div id="recaptcha-container" class="g-recaptcha"></div>
+    <input type="button" value="send code" onclick="myFunction0()">
+    <p></p>
+    <input type="text" id="verificationcode" value="enter verification">
+    <input type="button" value="Submit" onclick="myFunction()">
+    
+    <script type="text/javascript">
+
+
+
+        var onloadCallback = function () {
+            console.log("grecaptcha is ready!");
+            window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+                'size': 'normal',
+                /*'callback': function (response) {
+                    console.log("reCaptcha loaded")
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+                    // ...
+                },
+                'expired-callback': function () {
+            // Response expired. Ask user to solve reCAPTCHA again.
+            // ...
+            console.log("reCaptcha error");
+        window.recaptchaVerifier.render().then(function (widgetId) {
+            grecaptcha.reset('recaptcha-container');
+        });
+    
+    }*/
+            });
+        };
+
+        var myFunction0 = function () {
+            var phone = document.getElementById("phonenumber").value;
+            console.log(phone + "XXXX")
+            firebase.auth().signInWithPhoneNumber(phone, window.recaptchaVerifier)
+                .then(function (confirmationResult) {
+                    window.confirmationResult = confirmationResult;
+                    console.log(confirmationResult);
+                });
+        }
+
+        var myFunction = function () {
+            window.confirmationResult.confirm(document.getElementById("verificationcode").value)
+                .then(function (result) {
+                    alert('login process successfull!\n redirecting');
+                    alert('<a href="javascript:alert(\'hi\');">alert</a>')
+                    console.log("congratulations!!...")
+                }, function (error) {
+                    alert(error);
+                });
+        };
+
+    </script>
+</body>
+
+</html>

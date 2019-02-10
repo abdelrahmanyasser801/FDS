@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+		<style type="text/css">
+         .body{
+               background: url(images/photo3.jpg) no-repeat center center fixed;
+            
+                background-size: cover;
+      }
+	  .wrapper{
+		  text-align: center
+	  }
+	  .button{
+		  position: absolute;
+		  top:50%;
+		  left:35%;
+		  border-radius:25px; 
+		  
+	  }
+
+
+	  .button:hover{
+		  text-decoration-line: underline
+	  }
+	</style>
+	<title>Services</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- font files -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" media="all" rel="stylesheet"
+	 type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- /font files -->
+	<!-- css files -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/typo.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/serv.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- /css files -->
+	<!-- js files -->
+	<script src="js/modernizr.custom.js"></script>
+	<!-- /js files -->
+</head>
+<script src="firebase/all.js"></script>
+<body class="body">
+	<!-- navigation -->
+	<section class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-5 nav-w3ls1">
+					<div class="logo">
+						<a href="un-index.html" class="logo-w3ls">
+							<h1>
+								<img src="images/logo.png">
+							</h1>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 nav-w3ls2">
+					<div class="main clearfix">
+						<nav id="menu" class="nav">
+							<ul>
+								<li class="active">
+									<a href="un-index.html">
+										<span class="icon">
+											<i aria-hidden="true" class="icon-home"></i>
+										</span>
+										<span>Home</span>
+									</a>
+								</li>
+								
+								<li>
+										<a href="login.html" action="login.html">
+										  <span class="icon">
+											<i aria-hidden="true" class="icon-portfolio"></i>
+										  </span>
+										  <span>login</span>
+										</a>
+									  </li>
+									  <li>
+										<a href="signup.html">
+										  <span class="icon">
+											<i aria-hidden="true" class="icon-team"></i>
+										  </span>
+										  <span>Sign Up</span>
+										</a>
+									  </li>
+								<li>
+									<a href="contact.html">
+										<span class="icon">
+											<i aria-hidden="true" class="icon-contact"></i>
+										</span>
+										<span>Contact</span>
+									</a>
+
+									
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /navigation -->
+	<!--Your Code***************
+		
+		<form action="single-order.html" method="post">
+			<input type="submit" value="single" class="button">
+		</form>
+		
+		
+		
+		
+		*********************************************-->
+	<div class="fort wrapper">
+		
+		<form action="single-order.html" method="post">
+			<input type="submit" value="single" >
+		</form>
+    	<form action="multi.html" method="post">
+			<input type="submit" value="multi" >
+		</form>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.vide.min.js"></script>
+	</div>
+	<!-- js files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- js for back to top -->
+	<script src="js/top.js"></script>
+	<!-- /js for back to top -->
+	<!-- js for navigation -->
+	<script>
+		//  The function to change the class
+		var changeClass = function (r, className1, className2) {
+			var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+			if (regex.test(r.className)) {
+				r.className = r.className.replace(regex, ' ' + className2 + ' ');
+			}
+			else {
+				r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+			}
+			return r.className;
+		};
+
+		//  Creating our button in JS for smaller screens
+		var menuElements = document.getElementById('menu');
+		menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+		//  Toggle the class on click to show / hide the menu
+		document.getElementById('menutoggle').onclick = function () {
+			changeClass(this, 'navtoogle active', 'navtoogle');
+		}
+
+		// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+		document.onclick = function (e) {
+			var mobileButton = document.getElementById('menutoggle'),
+				buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+			if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+				changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+			}
+		}
+	</script>
+	<!-- /js for navigation -->
+	<!-- /js files -->
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+    authDomain: "waslnyangaz.firebaseapp.com",
+    databaseURL: "https://waslnyangaz.firebaseio.com",
+    projectId: "waslnyangaz",
+    storageBucket: "waslnyangaz.appspot.com",
+    messagingSenderId: "215507724801"
+  };
+  firebase.initializeApp(config);
+</script>

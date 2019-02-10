@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <input type="text" name="" id="phonenumber">
+    <div class="g-recaptcha" data-sitekey="6Ld2XHgUAAAAAMOse2u-0iVOvdgi3NQs2BMJIvF0"></div>
+    <input type="submit" value="Submit-phone-number" onsubmit="myFunction0()">
+    <input type="text" name="" id="verificationcode">
+    <input type="submit" value="submit-code" onsubmit="myFunction()">
+    </form>
+</body>
+
+</html>
+
+
+<script>
+    function myFunction0() {
+        console.log("inside the function")
+        var phone = document.getElementById("phonenumber").value;
+        console.log(phone)
+        firebase.auth().signInWithPhoneNumber(phone, window.recaptchaVerifier)
+            .then(function (confirmationResult) {
+                window.confirmationResult = confirmationResult;
+                console.log(confirmationResult);
+            });
+    }
+    function myFunction() {
+        window.confirmationResult.confirm(document.getElementById("verificationcode").value)
+            .then(function (result) {
+                alert('login process successfull!\n redirecting');
+                alert('<a href="javascript:alert(\'hi\');">alert</a>')
+                console.log("congratulations!!...")
+            }, function (error) {
+                alert(error);
+            });
+    };
+</script>
+
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+        authDomain: "waslnyangaz.firebaseapp.com",
+        databaseURL: "https://waslnyangaz.firebaseio.com",
+        projectId: "waslnyangaz",
+        storageBucket: "waslnyangaz.appspot.com",
+        messagingSenderId: "215507724801"
+    };
+    firebase.initializeApp(config);
+
+	//alert(e+" : "+p);
+
+</script>

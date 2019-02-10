@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <style type="text/css">
+    .agileinfo {
+      margin: 10px;
+
+    }
+
+    .for {
+      padding: 5px;
+      width: 250px;
+      position: relative;
+      right: auto;
+
+
+    }
+
+    /* .body {
+      background: url(photo.jpg) no-repeat center center fixed;
+
+      background-size: cover;
+  }*/
+  </style>
+ 
+
+</head>
+
+<body>
+  <!-- navigation -->
+ 
+  <!-- /navigation -->
+  
+  <div class="ihab">
+    <h1>
+      <a href="index.html" class="logo-w3ls"></a>
+    </h1>
+    <div class="container">
+      <!--*****************************************************************************************************************-->
+      <div class="agileinfo">
+        <input type="text" name="fname" id="fname" placeholder="First Name" required="" class="for">
+      </div>
+      <div class="agileinfo">
+        <input type="text" name="lname" id="lname" placeholder="Last Name" required="" class="for">
+      </div>
+      <input type="email" id="signupemail" placeholder="Email" required="">
+      <input type="Password" id="signuppassword" placeholder="signuppassword" required="">
+
+      <div class="agileinfo">
+        <input type="text" name="address" id="address" placeholder="Adress" required="" class="for">
+      </div>
+      <div class="agileinfo">
+        <input type="text" name="phone" id="phone" placeholder="phone number" required="" class="for">
+      </div>
+
+      <button id="signup">reg</button>
+      <div id="recaptcha-container"></div>
+
+      <input type="text" name="" id="verificationcode">
+
+    <input type="submit" value="submit-code" id="submit-code" >
+
+      <!--*****************************************************************************************************************-->
+
+
+      <div class="footer">
+        <p>&copy; Haunt Signup Form 2018. All Rights Reserved | Design by
+          <a href="#" target="blank">Piar Team</a>
+        </p>
+      </div>
+    </div>
+    <!-- js files -->
+
+
+    <!-- js for navigation -->
+    <script>
+      //  The function to change the class
+      var changeClass = function (r, className1, className2) {
+        var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+        if (regex.test(r.className)) {
+          r.className = r.className.replace(regex, ' ' + className2 + ' ');
+        }
+        else {
+          r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+        }
+        return r.className;
+      };
+
+      //  Creating our button in JS for smaller screens
+      var menuElements = document.getElementById('menu');
+      menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+      //  Toggle the class on click to show / hide the menu
+      document.getElementById('menutoggle').onclick = function () {
+        changeClass(this, 'navtoogle active', 'navtoogle');
+      }
+
+      // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+      document.onclick = function (e) {
+        var mobileButton = document.getElementById('menutoggle'),
+          buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+        if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+          changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+        }
+      }
+    </script>
+    <!-- /js for navigation -->
+    <!-- /js files -->
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+    authDomain: "waslnyangaz.firebaseapp.com",
+    databaseURL: "https://waslnyangaz.firebaseio.com",
+    projectId: "waslnyangaz",
+    storageBucket: "waslnyangaz.appspot.com",
+    messagingSenderId: "215507724801"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebase/signup.js">
+//document.getElementById("signup").addEventListener("click", signup);
+</script>

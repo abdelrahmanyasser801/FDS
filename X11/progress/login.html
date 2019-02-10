@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Login Wassally</title>
+	
+</head>
+<body class="body">
+<!-- navigation -->
+
+	
+	<div class="ihab">
+		<section class="login-maintop">
+			<div>
+				<header>
+					<a href="index.html" class="logo-w3ls"></a>
+				</header>
+				
+					<h2>login now</h2>
+
+
+						<input type="email"   id="logemail" placeholder="E-mail" required="">
+						<input type="password"  id="logpassword" placeholder="enter your password" required="">
+						<button id="login">log</button>
+						
+					
+					
+				
+				<!--footer-->
+				<div class="footer">
+					<p>&copy; 2018 Wassally. All rights reserved | Design by
+						<a>PAIR TEAM</a>
+					</p>
+				</div>
+				<!--//footer-->
+			</div>
+		</section>
+		
+
+	<!-- js for navigation -->
+	
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+    authDomain: "waslnyangaz.firebaseapp.com",
+    databaseURL: "https://waslnyangaz.firebaseio.com",
+    projectId: "waslnyangaz",
+    storageBucket: "waslnyangaz.appspot.com",
+    messagingSenderId: "215507724801"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebase/login.js"></script>

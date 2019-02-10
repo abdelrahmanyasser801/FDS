@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+</head>
+
+<body>
+    <input type="text" name="" id="phonenumber">
+    <div class="g-recaptcha" id="recaptcha"></div>
+
+    <input type="submit" value="Submit-phone-number" id="Submit-phone-number" >
+    
+    <input type="text" name="" id="verificationcode">
+
+    <input type="submit" value="submit-code" id="submit-code" >
+    </form>
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+            authDomain: "waslnyangaz.firebaseapp.com",
+            databaseURL: "https://waslnyangaz.firebaseio.com",
+            projectId: "waslnyangaz",
+            storageBucket: "waslnyangaz.appspot.com",
+            messagingSenderId: "215507724801"
+        };
+        firebase.initializeApp(config);
+    
+        //alert(e+" : "+p);
+    
+    </script>
+
+<script>
+    document.getElementById("Submit-phone-number").addEventListener("click",myFunction0);
+    document.getElementById("submit-code").addEventListener("click",myFunction);
+
+    /*window.recaptchaVerifier*/appVer = new firebase.auth.RecaptchaVerifier("recaptcha");
+
+    function myFunction0() {
+        console.log("inside the function")
+        var phone = document.getElementById("phonenumber").value;
+        console.log(phone)
+       // firebase.auth().currentUser.linkWithPhoneNumber(phoneNumber, appVerifier);
+        firebase.auth().signInWithPhoneNumber(phone, appVer)
+            .then(function (confirmationResult) {
+                window.confirmationResult = confirmationResult;
+                console.log(confirmationResult);
+            }).catch(function(error){alert(error.message)});
+    }
+    function myFunction() {
+        window.confirmationResult.confirm(document.getElementById("verificationcode").value)
+            .then(function (result) {
+                alert('login process successfull!\n redirecting');
+                alert('<a href="javascript:alert(\'hi\');">alert</a>')
+                console.log("congratulations!!...")
+            }, function (error) {
+                alert(error);
+            });
+    };
+</script>
+
+

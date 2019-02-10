@@ -1,0 +1,17 @@
+[debug] [2018-11-28T12:22:59.392Z] ----------------------------------------------------------------------
+[debug] [2018-11-28T12:22:59.392Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Owner\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2018-11-28T12:22:59.392Z] CLI Version:   6.0.0
+[debug] [2018-11-28T12:22:59.392Z] Platform:      win32
+[debug] [2018-11-28T12:22:59.392Z] Node Version:  v8.11.3
+[debug] [2018-11-28T12:22:59.408Z] Time:          Wed Nov 28 2018 22:22:59 GMT+1000 (E. Australia Standard Time)
+[debug] [2018-11-28T12:22:59.408Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-28T12:22:59.486Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-28T12:22:59.486Z] > authorizing via signed-in user
+[debug] [2018-11-28T12:22:59.486Z] [iam] checking project waslnyangaz for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-11-28T12:22:59.502Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/waslnyangaz:testIamPermissions  
+
+[debug] [2018-11-28T12:23:01.324Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-28T12:23:01.324Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/waslnyangaz  
+ 
+[debug] [2018-11-28T12:23:02.343Z] <<< HTTP RESPONSE 200

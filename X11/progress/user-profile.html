@@ -1,0 +1,38 @@
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+        authDomain: "waslnyangaz.firebaseapp.com",
+        databaseURL: "https://waslnyangaz.firebaseio.com",
+        projectId: "waslnyangaz",
+        storageBucket: "waslnyangaz.appspot.com",
+        messagingSenderId: "215507724801"
+    };
+    firebase.initializeApp(config);
+
+
+    var user = firebase.auth().currentUser;
+    //var ref = firebase.database().ref('user/' );
+  
+    firebase.database().ref("user/")
+  .orderByChild("fname")
+  .equalTo("poula")
+  .once("value", function (snapshot) {
+
+    var key;
+
+    snapshot.forEach(function (childSnapshot) {
+      key = childSnapshot.key;
+      return true; // Cancel further enumeration.
+    });
+    console.log(key)
+    if (key) {
+      console.log("Found user: " + key);
+    } else {
+      console.log("User not found.");
+    }
+  });
+
+    
+</script>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+
+<head>
+  <!-------------------------------------------------------------------------------------------------->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+  <!-------------------------------------------------------------------------------------------------->
+<style type="text/css">
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .15em solid orange;  The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .18em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .15em solid orange;  The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .18em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    animation-delay: 5s;
+   
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% {  }
+}
+
+.but {
+  border-radius: 4px;
+  background-color: #999900;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 4vw;
+  padding: 2vw;
+  padding-top: 1vw;
+  max-width: 40vw;
+  max-height: 10vw;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left:40vw;
+  margin-bottom: 5vw;
+
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20vw;
+  transition: 0.5s;
+}
+
+.but:hover span {
+  padding-right: 5vw;
+}
+
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+  <title>home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" media="all" rel="stylesheet"
+    type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- /font files -->
+  <!-- css files -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/typo.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/portfolio.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/serv.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!---->
+  <script src="js/modernizr.custom.js"></script>
+</head>
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("images/about-img1.jpg");
+  /* Set a specific height */
+  min-height:30vw; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("images/abou-img2.jpg");
+  /* Set a specific height */
+  min-height:30vw; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  
+  
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("images/photo3.jpg");
+  /* Set a specific height */
+  min-height:30vw; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  
+  
+}
+.pair
+{
+  text-align: center;
+  font-size: 20px;
+  color: #FFFFFF;
+  
+}
+</style>
+<body>
+
+    <!-- navigation -->
+    <section class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-5 nav-w3ls1">
+              <div class="logo">
+                <a href="index.html" class="logo-w3ls">
+                  <h1>
+                    <img src="images/logo.png">
+                  </h1>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 nav-w3ls2">
+              <div class="main clearfix">
+                <nav id="menu" class="nav">
+                  <ul>
+                    <li class="active">
+                      <a href="index.html">
+                        <span class="icon">
+                          <i aria-hidden="true" class="icon-home"></i>
+                        </span>
+                        <span>Home</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="service.html">
+                        <span class="icon">
+                          <i aria-hidden="true" class="icon-services"></i>
+                        </span>
+                        <span>Services</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="login.html" action="login.html">
+                        <span class="icon">
+                          <i aria-hidden="true" class="icon-portfolio"></i>
+                        </span>
+                        <span>login</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="signup.html">
+                        <span class="icon">
+                          <i aria-hidden="true" class="icon-team"></i>
+                        </span>
+                        <span>Sign Up</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="un-contact.html">
+                        <span class="icon">
+                          <i aria-hidden="true" class="icon-contact"></i>
+                        </span>
+                        <span>Contact</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /navigation -->
+  <!-- banner section -->
+  <section class="banner-w3ls">
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="false">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="carousel-caption">
+              <span class="line-w3ls"></span>
+              <div class="typewriter">
+                <h1 style="font-size: 4vw">Welcome To FDS<br>More Than Just Delivery</h1>
+              </div>  
+               </div>
+            </div>
+        </div>
+      </div>
+      <!-- /.carousel -->
+    </div>
+  </section>
+  <!-- /banner section -->
+  <!-- about section -->
+
+  <!--about-->
+  <div class="parallax2">
+    <div class="typewriter">
+      <h2 style="color: #FFFFFF ; text-align: center ; padding-top: 10%; font-size: 4vw;">we can deliver any thing you need </h2>
+    </div>
+  </div>
+  <div class="parallax1">
+  
+  <section class="about-us"  style ="background-color:rgba(1, 1, 1, 0.3);opacity: 0.8 ;">
+    <a href="un-single-order.html">
+      <button class="but"><span> Create order</span></button>
+    </a>
+<!--      <a href="un-contact.html">
+                <button class="btn btn-link"  style="margin: auto; color:#999900"> 
+      </button>
+    --> 
+    </a>
+  </script>
+      <span class="about-line"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 about-w3ls1">
+          <!-- ACCORDION -->
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  <h4 class="panel-title asd">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i>
+                    Less Time
+
+                  </h4>
+                </a>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body panel_text">
+                  <div class="scrollbar" id="style-2">
+                      FDS company works hard on delivering the products to its customers asap to saver their time and effort, we deliver your products at the same day if it wasn't at the same hour, that's due to our big delivery team which is the biggest one in Egypt, and they are everywhere in The country
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  <h4 class="panel-title asd">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i>
+                    The Best service 
+
+                  </h4>
+                </a>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body panel_text">
+                    FDS provides the best experience to its customers by allowing them to use it from any platform whether it's an android,IOS or laptop by using a very good system that allows them to communicate with us in an easy, time saving way.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  <h4 class="panel-title asd">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <i class="glyphicon glyphicon-menu-up" aria-hidden="true"></i>
+                    Safety
+                  </h4>
+                </a>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body panel_text">
+                    FDS company keeps the safety and privacy of its clients' products and information, as the company will not search the products, and it's responsible for the safety of it and delivering it in the exact state that it has been given to us.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 about-w3ls2">
+          <div id="Fader" class="fader">
+            <img class="slide img-responsive" src="images/img1.jpg" alt="pair Team" title="pair Team" />
+            <img class="slide img-responsive" src="images/img2.jpg" alt="pair Team" title="pair Team" />
+            <img class="slide img-responsive" src="images/img3.jpg" alt="pair Team" title="pair Team" />
+            <div class="fader_controls">
+              <ul class="pager_list">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- /about section -->
+
+  <!-- partners section 
+  
+  <div class="parallax">
+  <section class="parallax">
+    <div class="container">
+      <h3 class="parallax" style ="text-align: center; font-size: 5vw; color: #FFFFFF;margin-top: 20%;">Our Partners</h3>
+      <div class="sliderfig">
+        
+      </div>
+    </section>
+  
+  -->
+  
+    <!-- footer section -->
+    <div class="parallax">
+    <section class="footer" style="background-color: rgba(1,1, 1, 0.9)">
+      
+      <div class="container">
+        <div class="row" >
+          <div class="col-lg-4 col-md-4 footer-w3ls1">
+            <h3>About Us</h3>
+            <p class="footer-p1">FDS company works hard on delivering the products to its customers asap to saver their time and effort, we deliver your products at the same day if it wasn't at the same hour, that's due to our big delivery team which is the biggest one in Egypt, and they are everywhere in The country
+              </p>
+            <p class="footer-p1"></p>
+          </div>
+       
+          <div class="col-lg-4 col-md-4 footer-w3ls3">
+            <h3>Our Social Links</h3>
+            <ul class="social-icons">
+              <li>
+                <a href="https://en-gb.facebook.com/login/">
+                  <i class="fa fa-facebook"></i>Facebook</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/login">
+                  <i class="fa fa-twitter"></i>Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/uas/login">
+                  <i class="fa fa-linkedin"></i>Linkedin</a>
+              </li>
+              <li>
+                <a href="https://aboutme.google.com/u/0/?referer=gplus">
+                  <i class="fa fa-google-plus"></i>Googleplus</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg-7 copy-w3ls1">
+            <ul class="nav-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="un-single-order.html">Create An Order</a>
+              </li>
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+              <li>
+                <a href="signup.html">SignUp</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 copy-w3ls2">
+            <p class="copyright">&copy; 2018 Ship Industry. All rights reserved | Design by
+              <a href="http://pair_team.com/" target="_blank">Pair Team</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+    <!-- /footer section -->
+   
+    </div>
+  </section>
+  <!-- /partners section -->
+  <!-- back to top -->
+  <a href="#0" class="cd-top">Top</a>
+  <!-- /back to top -->
+
+
+
+  <!-- js files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/SmoothScroll.min.js"></script>
+  <!-- js for back to top -->
+  <script src="js/top.js"></script>
+  <!-- /js for back to top -->
+  <!-- js for navigation -->
+  <script>
+    //  The function to change the class
+    var changeClass = function (r, className1, className2) {
+      var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+      if (regex.test(r.className)) {
+        r.className = r.className.replace(regex, ' ' + className2 + ' ');
+      }
+      else {
+        r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+      }
+      return r.className;
+    };
+
+    //  Creating our button in JS for smaller screens
+    var menuElements = document.getElementById('menu');
+    menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+    //  Toggle the class on click to show / hide the menu
+    document.getElementById('menutoggle').onclick = function () {
+      changeClass(this, 'navtoogle active', 'navtoogle');
+    }
+
+    // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+    document.onclick = function (e) {
+      var mobileButton = document.getElementById('menutoggle'),
+        buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+      if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+        changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+      }
+    }
+  </script>
+  <!-- /js for navigation -->
+  <!-- js for about section -->
+  <script src="js/slideshow.js"></script>
+  <!-- /js for about section -->
+  <!-- js for stats section -->
+  <script type="text/javascript" src="js/numscroller-1.0.js"></script>
+  <!-- /js for stats section -->
+  <script type="text/javascript">
+    $(window).load(function () {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 4,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+          portrait: {
+            changePoint: 480,
+            visibleItems: 1
+          },
+          landscape: {
+            changePoint: 640,
+            visibleItems: 2
+          },
+          tablet: {
+            changePoint: 768,
+            visibleItems: 3
+          }
+        }
+      });
+
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+  <!-- /js files -->
+</div>
+
+</body>
+
+</html>
+
+
+
+
+<!--Comments-->
+
+
+<!--
+  <section class="testimonials">
+    <h3 class="text-center agileits agileinfo wthree w3-agileits">What Our Customers Say</h3>
+    <p class="text-center agileits agileinfo wthree w3-agileits">......</p>
+    <div class="container">
+      <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <blockquote>" comm. "</blockquote>
+
+            <h4 class="text-center">
+              <span>Johnny Blaze</span> - Business Man</h4>
+          </div>
+          <div class="item">
+            <blockquote>" comm. "</blockquote>
+            <h4 class="text-center">
+              <span>Kate Winslet</span> - Executive Manager</h4>
+          </div>
+          <div class="item">
+            <blockquote>" comm. "</blockquote>
+            <h4 class="text-center">
+              <span>Max Payne</span> - CEO</h4>
+          </div>
+          <div class="item">
+            <blockquote>" comm. "</blockquote>
+            <img src="images/test4.png" alt="test1" class="img-responsive test">
+            <h4 class="text-center">
+              <span>Britney Spears</span> - Marketing Manager</h4>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  ***********************************************************************************************************************************
+  <section class="stats">
+    <div class="container">
+      <h3 class="text-center agileits-w3layouts agile w3-agile">Important Statistics About Us</h3>
+      <p class="text-center agileits-w3layouts agile w3-agile">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <div class="row">
+        <div class="col-md-3 col-sm-3 stats-grid stats-grid-1">
+          <div class="numscroller" data-slno='1' data-min='0' data-max='158' data-delay='3' data-increment="1">85</div>
+          <h4>Companies</h4>
+          <span class="divider1"></span>
+        </div>
+        <div class="col-md-3 col-sm-3 stats-grid stats-grid-2">
+          <div class="numscroller" data-slno='1' data-min='0' data-max='63' data-delay='3' data-increment="1">95</div>
+          <h4>New Clients</h4>
+          <span class="divider1"></span>
+        </div>
+        <div class="col-md-3 col-sm-3 stats-grid stats-grid-3">
+          <div class="numscroller" data-slno='1' data-min='0' data-max='421' data-delay='3' data-increment="1">80</div>
+          <h4>Completed Projects</h4>
+          <span class="divider1"></span>
+        </div>
+        <div class="col-md-3 col-sm-3 stats-grid stats-grid-4">
+          <div class="numscroller" data-slno='1' data-min='0' data-max='562' data-delay='3' data-increment="1">90</div>
+          <h4>Happy Clients</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  *****************************************************************************************************************************************
+ <div>
+     <form name="myForm" action="cus-reg.html" onsubmit="return validateForm(address,fname,lname,phone,email,password)" method="POST">
+  <input type="text" name="address" id="address">
+    <input type="text" name="fname" id="fname">
+    <input type="text" name="lname" id="lname">
+    <input type="text" name="phone" id="phone">
+    <input type="text" name="email" id="email">
+    <input type="text" name="password" id="password">
+    
+      <input type="submit" value="cus-reg">
+    </form>
+    <form action="cap-reg.html">
+      <input type="submit" value="cap-reg">
+    </form>
+    <form >
+      <input type="submit" value="login">
+    </form>
+  </div>
+  ****************************************************************************************************************************************
+  <script>
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 28; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+function validateForm(address,fname,lname,phone,email,password) {
+  var address = document.forms["myForm"]["address"].value;
+   var fname = document.forms["myForm"]["fname"].value;
+   var lname = document.forms["myForm"]["lname"].value;
+   var phone = document.forms["myForm"]["phone"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var password = document.forms["myForm"]["password"].value;
+    firebase.database().ref('sample/'+ makeid() +'/personal info/' ).set({
+    address: address,
+    fname:fname,
+    lname:lname,
+    phone:phone,
+    
+  });
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  if (errorCode == 'auth/weak-password') {
+    alert('The password is too weak.');
+  } else if(errorCode == 'auth/email-already-in-use'){
+    alert('email exists');
+  }else if(errorCode == 'auth/invalid-email'){
+    alert('auth/invalid-email');
+  } else if(errorCode == 'auth/operation-not-allowed'){
+    alert('auth/operation-not-allowed');
+  } else{
+    alert(errorMessage);
+  }
+  console.log(error);
+});
+}
+</script>
+*****************************************************************************************************************************************
+-->
+
+
+<!--/Comments-->
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+    authDomain: "waslnyangaz.firebaseapp.com",
+    databaseURL: "https://waslnyangaz.firebaseio.com",
+    projectId: "waslnyangaz",
+    storageBucket: "waslnyangaz.appspot.com",
+    messagingSenderId: "215507724801"
+  };
+  firebase.initializeApp(config);
+</script>

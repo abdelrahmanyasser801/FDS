@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html>
+
+
+
+<head>
+	<style>
+	
+	</style>
+	<title>Contact FDS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- font files -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" media="all" rel="stylesheet"
+	 type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- /font files -->
+	<!-- css files -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/typo.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/serv.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- /css files -->
+	<!-- js files -->
+	<script src="js/modernizr.custom.js"></script>
+	<!-- /js files -->
+</head>
+<script src="firebase/all.js"></script>
+<body>
+	<!-- /banner section -->
+	<!-- navigation -->
+	<section class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-5 nav-w3ls1">
+					<div class="logo">
+						<a href="un-index.html" class="logo-w3ls">
+							<h1>
+								<img src="images/logo.png">
+							</h1>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 nav-w3ls2">
+					<div class="main clearfix">
+						<nav id="menu" class="nav">
+							<ul>
+								<li class="active">
+									<a href="un-index.html">
+										<span class="icon">
+											<i aria-hidden="true" class="icon-home"></i>
+										</span>
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a href="service.html">
+										<span class="icon">
+											<i aria-hidden="true" class="icon-services"></i>
+										</span>
+										<span>Services</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="contact.html">
+										<span class="icon">
+											<i aria-hidden="true" class="icon-contact"></i>
+										</span>
+										<span>Contact</span>
+									</a>
+
+									<li onclick="return signout()">
+										<a href="index.html">
+											<span class="icon">
+												<i aria-hidden="true" class="icon-team"></i>
+											</span>
+											<span>Log out</span>
+										</a>
+									</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /navigation -->
+	<section class="page-crumb" >
+		<div class="container" >
+			<!-- Page Heading/Breadcrumbs -->
+			<div class="row">
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li class="active">Contact</li>
+					</ol>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+	</section>
+	<!-- contact section -->
+	<section class="our-contacts" style="background-color: white">
+		<div class="container">
+			<h3 class="text-center w3layouts w3 w3l w3ls agileits agileinfo wthree w3-agileits">Connect With Us</h3>
+			<p class="text-center w3layouts w3 w3l w3ls agileits agileits-w3layouts agile w3-agile">We are happy to receive your suggestions and complaints .</p>
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+					<form name="myForm" onsubmit="return comment(name,email,phone,message)" method="POST">
+						<div class="row">
+							<div class="form-group col-lg-4">
+								<input type="text" class="form-control user-name" name="name" id="name" placeholder="Your Name" required/>
+							</div>
+							<div class="form-group col-lg-4">
+								<input type="email" class="form-control mail" name="email" id="email" placeholder="Your Email" required/>
+							</div>
+							<div class="form-group col-lg-4">
+								<input type="tel" class="form-control pno" name="phone" id="phone" placeholder="Your Phone Number" required/>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group col-lg-12">
+								<textarea class="form-control" rows="6" name="message" id="message" placeholder="Your Message" required></textarea>
+							</div>
+							<div class="form-group col-lg-12">
+								<button type="submit" class="btn-outline2">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="contact-details">
+						<h4 class="agileinfo wthree w3-agileits agileits-w3layouts agile w3-agile">Get In Touch</h4>
+						<div class="contact-info">
+							<div class="address">
+								<i class="glyphicon glyphicon-globe"></i>
+								<p class="p3">77 Jack Street</p>
+								<p class="p4">Chicago, USA</p>
+							</div>
+							<div class="phone">
+								<i class="glyphicon glyphicon-phone-alt"></i>
+								<p class="p3">+1 515 151515</p>
+								<p class="p4">+00 1010101010</p>
+							</div>
+							<div class="email-info">
+								<i class="glyphicon glyphicon-envelope"></i>
+								<p class="p3">
+									<a href="mailto:myemail@example.com">myemail1@example.com</a>
+								</p>
+							</div>
+						</div>
+						<div class="footer-links">
+							<ul>
+								<li>
+									<a href="#">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-whatsapp"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-youtube"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /contact section -->
+	<section class="map">
+		<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120"
+		 style="border:0" allowfullscreen></iframe>
+	</section>
+	<!-- footer section -->
+	<section class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 footer-w3ls1">
+					<h3>About Us</h3>
+					<p class="footer-p1">FDS company works hard on delivering the products to its customers asap to saver their time and effort, we deliver your products at the same day if it wasn't at the same hour, that's due to our big delivery team which is the biggest one in Egypt, and they are everywhere in The country
+						</p>
+					
+				</div>
+				
+		
+				<div class="col-lg-4 col-md-4 footer-w3ls3">
+					<h3>Our Social Links</h3>
+					<ul class="social-icons">
+						<li>
+							<a href="https://en-gb.facebook.com/login/">
+							  <i class="fa fa-facebook"></i>Facebook</a>
+						  </li>
+						  <li>
+							<a href="https://twitter.com/login">
+							  <i class="fa fa-twitter"></i>Twitter</a>
+						  </li>
+						  <li>
+							<a href="https://www.linkedin.com/uas/login">
+							  <i class="fa fa-linkedin"></i>Linkedin</a>
+						  </li>
+						  <li>
+							<a href="https://aboutme.google.com/u/0/?referer=gplus">
+							  <i class="fa fa-google-plus"></i>Googleplus</a>
+						  </li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-7 copy-w3ls1">
+					<ul class="nav-links">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="single-order.html">Create An Order</a>
+						</li>
+						<li>
+							<a href="portfolio.html">Login</a>
+						</li>
+						<li>
+							<a href="typo.html">SignUp</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-5 copy-w3ls2">
+					<p class="copyright">&copy; 2018 Ship Industry. All rights reserved | Design by
+						<a href="http://w3layouts.com/" target="_blank">Pair Team</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /footer section -->
+	<!-- back to top -->
+	<a href="#0" class="cd-top">Top</a>
+	<!-- /back to top -->
+	<!-- js files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- js for back to top -->
+	<script src="js/top.js"></script>
+	<!-- /js for back to top -->
+	<!-- js for navigation -->
+	<script>
+		//  The function to change the class
+		var changeClass = function (r, className1, className2) {
+			var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+			if (regex.test(r.className)) {
+				r.className = r.className.replace(regex, ' ' + className2 + ' ');
+			}
+			else {
+				r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+			}
+			return r.className;
+		};
+
+		//  Creating our button in JS for smaller screens
+		var menuElements = document.getElementById('menu');
+		menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+		//  Toggle the class on click to show / hide the menu
+		document.getElementById('menutoggle').onclick = function () {
+			changeClass(this, 'navtoogle active', 'navtoogle');
+		}
+
+		// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+		document.onclick = function (e) {
+			var mobileButton = document.getElementById('menutoggle'),
+				buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+			if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+				changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+			}
+		}
+	</script>
+	<!-- /js for navigation -->
+	<!-- /js files -->
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+    authDomain: "waslnyangaz.firebaseapp.com",
+    databaseURL: "https://waslnyangaz.firebaseio.com",
+    projectId: "waslnyangaz",
+    storageBucket: "waslnyangaz.appspot.com",
+    messagingSenderId: "215507724801"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebase/logout.js"></script>

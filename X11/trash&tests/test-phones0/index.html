@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Firebase Phone Number Auth
+    </title>
+</head>
+
+<body>
+
+    <p></p>
+    <input type="text" id="phonenumber" value="phone number">
+    <input type="button" value="send code">
+    
+
+    <div id="recaptcha-container" data-sitekey="6Ld2XHgUAAAAAMOse2u-0iVOvdgi3NQs2BMJIvF0" class="g-recaptcha"></div>
+
+
+
+
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            console.log("grecaptcha is ready!");
+            grecaptcha.render('recaptcha-container', {
+                'sitekey': '6Ld2XHgUAAAAAMOse2u-0iVOvdgi3NQs2BMJIvF0',
+                'callback':myFunction0
+            });
+        };
+
+        var myFunction0 = function () {
+            var phone = document.getElementById("phonenumber").value;
+            console.log(phone)
+            firebase.auth().signInWithPhoneNumber(phone, window.recaptchaVerifier)
+                .then(function (confirmationResult) {
+                    window.confirmationResult = confirmationResult;
+                    console.log(confirmationResult);
+                });
+        }
+        var myFunction = function () {
+            window.confirmationResult.confirm(document.getElementById("verificationcode").value)
+                .then(function (result) {
+                    alert('login process successfull!\n redirecting');
+                    alert('<a href="javascript:alert(\'hi\');">alert</a>')
+                    console.log("congratulations!!...")
+                }, function (error) {
+                    alert(error);
+                });
+        };
+    </script>
+</body>
+
+</html>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAEYBVjWeu1qyqfq0gp_yeTd9WBFJOKXbs",
+        authDomain: "waslnyangaz.firebaseapp.com",
+        databaseURL: "https://waslnyangaz.firebaseio.com",
+        projectId: "waslnyangaz",
+        storageBucket: "waslnyangaz.appspot.com",
+        messagingSenderId: "215507724801"
+    };
+    firebase.initializeApp(config);
+
+	//alert(e+" : "+p);
+
+</script>
